@@ -297,6 +297,10 @@
         type: String,
         default: 'value'
       },
+      labelKey: {
+        type: String,
+        default: 'name'
+      },
       collapseTags: Boolean,
       popperAppendToBody: {
         type: Boolean,
@@ -525,7 +529,7 @@
         }
         if (option) return option;
         const label = (!isObject && !isNull && !isUndefined)
-          ? value : '';
+          ? value : (isObject ? value[this.labelKey] : '');
         let newOption = {
           value: value,
           currentLabel: label
