@@ -12,7 +12,7 @@ Object.keys(Components).forEach(function(key) {
   externals[`element-ui/packages/${key}`] = `element-ui/lib/${key}`;
 });
 
-externals['element-ui/src/locale'] = 'element-ui/lib/locale';
+externals['snow-element-ui/src/locale'] = 'snow-element-ui/lib/locale';
 utilsList.forEach(function(file) {
   file = path.basename(file, '.js');
   externals[`element-ui/src/utils/${file}`] = `element-ui/lib/utils/${file}`;
@@ -36,7 +36,7 @@ exports.alias = {
   main: path.resolve(__dirname, '../src'),
   packages: path.resolve(__dirname, '../packages'),
   examples: path.resolve(__dirname, '../examples'),
-  'element-ui': path.resolve(__dirname, '../')
+  'snow-element-ui': path.resolve(__dirname, '../')
 };
 
 exports.vue = {

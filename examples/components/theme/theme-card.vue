@@ -152,7 +152,7 @@
   }
   &.is-upload:hover {
     box-shadow: none;
-  } 
+  }
 
   &:hover {
     box-shadow: 0 0 10px 0 #999;
@@ -172,10 +172,10 @@
           <span>{{getActionDisplayName('upload-theme')}}</span>
         </div>
       </div>
-      <input 
-        class="el-upload__input" 
-        type="file" 
-        ref="input"  
+      <input
+        class="el-upload__input"
+        type="file"
+        ref="input"
         @change="uploadAction"
         accept="application/json"
       />
@@ -224,8 +224,8 @@
                 <el-dropdown-menu slot="dropdown">
                   <el-dropdown-item command="rename">{{getActionDisplayName('rename-theme')}}</el-dropdown-item>
                   <el-dropdown-item command="copy">{{getActionDisplayName('copy-theme')}}</el-dropdown-item>
-                  <el-dropdown-item 
-                      command="delete" 
+                  <el-dropdown-item
+                      command="delete"
                       style="color: #F56C6C;"
                     >
                       {{getActionDisplayName('delete-theme')}}
@@ -250,7 +250,7 @@ import {
 } from './constant.js';
 import { savePreviewToLocal } from './localstorage';
 import { tintColor } from '../../color.js';
-import dateUtil from 'element-ui/src/utils/date';
+import dateUtil from 'snow-element-ui/src/utils/date';
 import { getActionDisplayName } from '../theme-configurator/utils/utils';
 
 export default {

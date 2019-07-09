@@ -75,8 +75,8 @@ import Link from '../packages/link/index.js';
 import Divider from '../packages/divider/index.js';
 import Image from '../packages/image/index.js';
 import Calendar from '../packages/calendar/index.js';
-import locale from 'element-ui/src/locale';
-import CollapseTransition from 'element-ui/src/transitions/collapse-transition';
+import locale from 'snow-element-ui/src/locale';
+import CollapseTransition from 'snow-element-ui/src/transitions/collapse-transition';
 
 const components = [
   Pagination,
@@ -184,7 +184,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '2.8.0',
+  version: '2.8.1',
   locale: locale.use,
   i18n: locale.i18n,
   install,

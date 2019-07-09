@@ -1,8 +1,8 @@
 {
-  "name": "element-ui",
-  "version": "2.8.0",
+  "name": "snow-element-ui",
+  "version": "2.8.2",
   "description": "A Component Library for Vue.js.",
-  "main": "lib/element-ui.common.js",
+  "main": "lib/snow-element-ui.common.js",
   "files": [
     "lib",
     "src",
@@ -34,7 +34,7 @@
     },
     {
       "domain": "element-theme",
-      "public": "examples/element-ui",
+      "public": "examples/snow-element-ui",
       "build": [
         "yarn",
         "npm run deploy:build"

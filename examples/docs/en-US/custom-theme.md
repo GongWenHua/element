@@ -22,7 +22,7 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 Then in the entry file of your project, import this style file instead of Element's built CSS:
 ```JS
 import Vue from 'vue'
-import Element from 'element-ui'
+import Element from 'snow-element-ui'
 import './element-variables.scss'
 
 Vue.use(Element)
@@ -100,7 +100,7 @@ By default the build theme file is placed inside `./theme`. You can specify its 
 
 ```javascript
 import '../theme/index.css'
-import ElementUI from 'element-ui'
+import ElementUI from 'snow-element-ui'
 import Vue from 'vue'
 
 Vue.use(ElementUI)
