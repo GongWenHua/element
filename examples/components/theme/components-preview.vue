@@ -25,6 +25,15 @@
   .el-carousel__item:nth-child(2n + 1) {
     background-color: #d3dce6;
   }
+
+  .el-avatar:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .avatar-demo {
+    display: flex;
+    align-items: center;
+  }
 }
 </style>
 <template>
@@ -140,7 +149,7 @@
     </el-row>
     <h4>Rate</h4>
     <el-row>
-      <el-rate class="demo-line" v-model="rate"></el-rate> 
+      <el-rate class="demo-line" v-model="rate"></el-rate>
       <el-rate
         class="demo-line"
         v-model="rate"
@@ -227,7 +236,7 @@
       <div role="alert" class="demo-item el-message el-message--success el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon el-icon-success"></i><p class="el-message__content">Congrats, this is a success message.</p><!----></div>
       <div role="alert" class="demo-item el-message el-message--warning el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon el-icon-warning"></i><p class="el-message__content">Warning, this is a warning message.</p><!----></div>
       <div role="alert" class="demo-item el-message el-message--info el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon el-icon-info"></i><p class="el-message__content">This is a message.</p><!----></div>
-      <div role="alert" class="demo-item el-message el-message--error el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon el-icon-error"></i><p class="el-message__content">Oops, this is a error message.</p><!----></div>
+      <div role="alert" class="demo-item el-message el-message--error is-closable el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon el-icon-error"></i><p class="el-message__content">Oops, this is a error message.</p><i class="el-message__closeBtn el-icon-close"></i></div>
     </el-row>
     <h4>MessageBox</h4>
     <el-row>
@@ -353,6 +362,15 @@
           <div>Operation feedback: enable the users to clearly perceive their operations by style updates and interactive effects;</div>
         </el-collapse-item>
       </el-collapse>
+    </el-row>
+    <h4>Avatar</h4>
+    <el-row class="demo-line avatar-demo">
+      <el-avatar icon="el-icon-user-solid"/>
+      <el-avatar> avatar </el-avatar>
+      <el-avatar shape="square" fit="contain" :src="avatarData.url"></el-avatar>
+      <el-avatar size="large"> large </el-avatar>
+      <el-avatar size="medium"> medium </el-avatar>
+      <el-avatar size="small"> small </el-avatar>
     </el-row>
   </div>
 </template>
@@ -511,6 +529,9 @@ export default {
       defaultTreeProps: {
         children: 'children',
         label: 'label'
+      },
+      avatarData: {
+        url: 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'
       }
     };
   }

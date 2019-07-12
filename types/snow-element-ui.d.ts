@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue, { PluginObject } from 'vue'
 import { ElementUIComponent, ElementUIComponentSize, ElementUIHorizontalAlignment } from './component'
 
 import { ElAlert } from './alert'
@@ -69,9 +69,15 @@ import { ElTooltip } from './tooltip'
 import { ElTransfer } from './transfer'
 import { ElTree } from './tree'
 import { ElUpload } from './upload'
+import { ElLink } from './link'
 import { ElDivider } from './divider'
+import { ElIcon } from './icon'
 import { ElCalendar } from './calendar'
 import { ElImage } from './image'
+import { ElBacktop } from './backtop'
+import { ElInfiniteScroll } from './infiniteScroll'
+import { ElPageHeader } from './page-header'
+import { ElAvatar } from './avatar'
 
 export interface InstallationOptions {
   locale: any,
@@ -306,3 +312,27 @@ export class Upload extends ElUpload {}
 
 /** Divider Component */
 export class Divider extends ElDivider {}
+
+/** Link Component */
+export class Link extends ElLink {}
+
+/** Image Component */
+export class Image extends ElImage {}
+
+/** Icon Component */
+export class Icon extends ElIcon {}
+
+/** Calendar Component */
+export class Calendar extends ElCalendar {}
+
+/** Backtop Component */
+export class Backtop extends ElBacktop {}
+
+/** InfiniteScroll Directive */
+export const InfiniteScroll: PluginObject<ElInfiniteScroll>;
+
+/** PageHeader Component */
+export class PageHeader extends ElPageHeader {}
+
+/** Avatar Component */
+export class Avatar extends ElAvatar {}

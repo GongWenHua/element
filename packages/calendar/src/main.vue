@@ -36,6 +36,7 @@
       <date-table
         :date="date"
         :selected-day="realSelectedDay"
+        :first-day-of-week="realFirstDayOfWeek"
         @pick="pickDay" />
     </div>
     <div
@@ -86,6 +87,10 @@ export default {
           return true;
         }
       }
+    },
+    firstDayOfWeek: {
+      type: Number,
+      default: 1
     }
   },
 
@@ -146,8 +151,8 @@ export default {
     },
 
     i18nDate() {
-      const year = this.formatedDate.slice(0, 4);
-      const month = this.formatedDate.slice(5, 7).replace('0', '');
+      const year = this.date.getFullYear();
+      const month = this.date.getMonth() + 1;
       return `${year} ${this.t('el.datepicker.year')} ${this.t('el.datepicker.month' + month)}`;
     },
 
@@ -238,6 +243,13 @@ export default {
         return data;
       }
       return [];
+    },
+
+    realFirstDayOfWeek() {
+      if (this.firstDayOfWeek < 1 || this.firstDayOfWeek > 6) {
+        return 0;
+      }
+      return Math.floor(this.firstDayOfWeek);
     }
   },
 

@@ -325,7 +325,7 @@ export default {
           });
           break;
         case 'download':
-          bus.$emit(ACTION_DOWNLOAD_THEME, this.theme);
+          bus.$emit(ACTION_DOWNLOAD_THEME, this.theme, this.config.name);
           break;
         default:
           this.$emit('action', e, this.config);
