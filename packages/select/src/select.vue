@@ -109,6 +109,7 @@
       </template>
     </el-input>
     <transition
+      v-if="!customDropDown"
       name="el-zoom-in-top"
       @before-enter="handleMenuEnter"
       @after-leave="doDestroy">
@@ -275,6 +276,7 @@
           return true;
         }
       },
+      customDropDown: Boolean,
       automaticDropdown: Boolean,
       size: String,
       disabled: Boolean,
