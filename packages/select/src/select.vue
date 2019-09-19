@@ -34,7 +34,7 @@
           :size="collapseTagSize"
           type="info"
           disable-transitions>
-          <span class="el-select__tags-text">{{ selected.length }}个</span>
+          <span class="el-select__tags-text">已选{{ selected.length }}个</span>
         </el-tag>
       </span>
       <transition-group @after-leave="resetInputHeight" v-if="!collapseTags">

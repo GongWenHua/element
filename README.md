@@ -87,7 +87,7 @@
 
 ## Install
 ```shell
-npm install element-ui -S
+npm install snow-element-ui -S
 ```
 
 ## Quick Start
