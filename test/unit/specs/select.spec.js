@@ -190,7 +190,7 @@ describe('Select', () => {
       }
     }, true);
     const options = vm.$el.querySelectorAll('.el-select-dropdown__item');
-    expect(vm.value).to.equal('');
+    expect(vm.value).to.equal(null);
     triggerEvent(options[2], 'mouseenter');
     options[2].click();
     setTimeout(() => {
