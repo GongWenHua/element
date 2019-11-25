@@ -194,7 +194,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '2.10.2',
+  version: '2.10.3-bate.2',
   locale: locale.use,
   i18n: locale.i18n,
   install,

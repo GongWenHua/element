@@ -72,10 +72,6 @@
             </span>
           </span>
         </span>
-        <i class="el-input__icon"
-          v-if="validateState"
-          :class="['el-input__validateIcon', validateIcon]">
-        </i>
       </span>
       <!-- 后置元素 -->
       <div class="el-input-group__append" v-if="$slots.append">
