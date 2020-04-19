@@ -6,7 +6,8 @@ const flatNodes = (data, leafOnly) => {
     if (node.isLeaf) {
       res.push(node);
     } else {
-      !leafOnly && res.push(node);
+      // !leafOnly && res.push(node);
+      res.push(node);
       res = res.concat(flatNodes(node.children, leafOnly));
     }
     return res;
